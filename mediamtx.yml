@@ -1,0 +1,38 @@
+# Archivo de configuración MediaMTX
+# Guardar como mediamtx.yml
+
+# Protocolos
+rtsp: yes
+rtspAddress: :8554
+
+# Puerto RTMP (para recibir stream desde OBS)
+rtmp: yes
+rtmpAddress: :1935
+
+# Puerto HLS (para reproducir desde navegadores)
+hls: yes
+hlsAddress: :8889
+
+# WebRTC (para baja latencia en navegadores)
+webrtc: yes
+webrtcAddress: :8888
+
+# API REST (para status y WebUI)
+api: yes
+apiAddress: :9997
+
+# Métricas y profiling (desactivados en local)
+metrics: no
+pprof: no
+
+# Paths disponibles
+paths:
+  all:
+    # Opcional: proteger con usuario/clave si querés seguridad local
+    # publishUser: myuser
+    # publishPass: mypass
+    # readUser: myuser
+    # readPass: mypass
+    # Si querés ejecutar un comando cuando el stream queda listo
+    runOnReady: sh -c "echo 'Stream {{path}} listo desde {{publisherIp}}'"
+    runOnNotReady: sh -c "echo 'Stream {{path}} detenido'"

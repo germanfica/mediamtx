@@ -1,0 +1,16 @@
+services:
+  mediamtx:
+    image: bluenviron/mediamtx:latest
+    # Otras variantes disponibles:
+    # image: bluenviron/mediamtx:latest-ffmpeg     # ✔️ FFmpeg, ❌ RPi
+    # image: bluenviron/mediamtx:latest-rpi        # ❌ FFmpeg, ✔️ RPi
+    # image: bluenviron/mediamtx:latest-ffmpeg-rpi # ✔️ FFmpeg, ✔️ RPi
+    container_name: mediamtx
+    ports:
+      - "8554:8554"   # RTSP
+      - "8888:8888"   # WebRTC
+      - "8889:8889"   # HLS
+      - "8890:8890"   # Web UI
+    volumes:
+      - ./mediamtx.yml:/mediamtx.yml
+    restart: unless-stopped
