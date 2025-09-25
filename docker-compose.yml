@@ -7,10 +7,11 @@ services:
     # image: bluenviron/mediamtx:latest-ffmpeg-rpi # ✔️ FFmpeg, ✔️ RPi
     container_name: mediamtx
     ports:
+      - "1935:1935"   # RTMP
       - "8554:8554"   # RTSP
       - "8888:8888"   # WebRTC
       - "8889:8889"   # HLS
-      - "8890:8890"   # Web UI
+      - "9997:9997"   # API REST
     volumes:
       - ./mediamtx.yml:/mediamtx.yml
     restart: unless-stopped
