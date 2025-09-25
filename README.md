@@ -1,5 +1,6 @@
 # mediamtx
 
+<img width="1920" height="1040" alt="chrome_LQWfbra6Ey" src="https://github.com/user-attachments/assets/17212510-13e4-4dbc-a6a2-6b020ffae277" />
 
 This project provides a ready-to-use [MediaMTX](https://github.com/bluenviron/mediamtx) server running in Docker, allowing you to stream from **OBS Studio** and consume the stream over standard protocols such as RTMP, HLS, WebRTC, and RTSP.
 
